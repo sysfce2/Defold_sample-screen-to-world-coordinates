@@ -20,17 +20,22 @@ local function update_zoom(self, zoom)
 	if zoom == ZOOM_05 then
 		go.set(CAMERA, "orthographic_zoom", 0.5)
 		label.set_text("instructions#instructions", "Zoom x 0.5 - Tab for next")
+		camera.set_orthographic_mode(CAMERA, camera.ORTHO_MODE_FIXED)
 	elseif zoom == ZOOM_1 then
 		go.set(CAMERA, "orthographic_zoom", 1)
 		label.set_text("instructions#instructions", "Zoom x 1 - Tab for next")
+		camera.set_orthographic_mode(CAMERA, camera.ORTHO_MODE_FIXED)
 	elseif zoom == ZOOM_2 then
 		go.set(CAMERA, "orthographic_zoom", 2)
 		label.set_text("instructions#instructions", "Zoom x 2 - Tab for next")
+		camera.set_orthographic_mode(CAMERA, camera.ORTHO_MODE_FIXED)
 	elseif zoom == ZOOM_3 then
 		go.set(CAMERA, "orthographic_zoom", 3)
 		label.set_text("instructions#instructions", "Zoom x 3 - Tab for next")
+		camera.set_orthographic_mode(CAMERA, camera.ORTHO_MODE_FIXED)
 	elseif zoom == ZOOM_AUTO then
 		label.set_text("instructions#instructions", "Auto Zoom - Tab for next")
+		camera.set_orthographic_mode(CAMERA, camera.ORTHO_MODE_AUTO_COVER)
 	end
 end
 
